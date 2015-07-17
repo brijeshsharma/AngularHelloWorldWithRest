@@ -1,0 +1,11 @@
+describe('Hello World form', function() {
+ it('display initial text', function() {
+   browser.get('');
+   expect(element(by.binding('yourName')).getText()).toEqual("Hello !");
+ });
+ it('greets Protractor',function(){
+   browser.get('');
+   element(by.model('yourName')).sendKeys("Protractor");
+   expect(element(by.binding('yourName')).getText()).toEqual("Hello Protractor!");
+ });
+});
